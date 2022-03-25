@@ -1,20 +1,18 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+//modules
+import React, { useState } from "react";
+//import { MoralisProvider } from "react-moralis";
+//components
+import AppBase from "./Frontend/Components/app";
 
-export default function App() {
+//Navigation stack definition
+function App() {
+  const appId = "kZdlguzNd3UOl1iB1Xk47rfwVOELotXvUGBUgW1j";
+  const serverUrl = "https://0vjgn9swiqkx.usemoralis.com:2053/server";
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    //<MoralisProvider appId={appId} serverUrl={serverUrl}>
+    <AppBase />
+    //</MoralisProvider>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
