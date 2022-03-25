@@ -22,7 +22,7 @@ function Register({ navigation }) {
   const [passwordsMatch, setPasswordsMatch] = useState(false);
   const [image, setImage] = useState(null);
 
-  function Register() {
+  function RegisterButtonHandler() {
     if (password.text == confirm.text) {
       setPasswordsMatch(true);
     }
@@ -95,7 +95,10 @@ function Register({ navigation }) {
           </Pressable>
         </View>
 
-        <MainButton onPressFunction={Register} title={"Register"} />
+        <MainButton
+          onPressFunction={RegisterButtonHandler}
+          title={"Register"}
+        />
       </View>
     </ScrollView>
   );

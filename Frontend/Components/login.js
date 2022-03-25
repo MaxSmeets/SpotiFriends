@@ -5,12 +5,16 @@ import { StyleSheet, View } from "react-native";
 import TextInputField from "./textInputField";
 import MainButton from "./mainButton";
 
-function Login() {
+function Login({ navigation }) {
+  function LoginButtonHandler() {
+    navigation.navigate("dashboard");
+  }
+
   return (
     <View style={styles.body}>
       <TextInputField text={"Username"} placeholder={null} secure={false} />
       <TextInputField text={"Password"} placeholder={null} secure={true} />
-      <MainButton onPressFunction={null} title={"Login"} />
+      <MainButton onPressFunction={LoginButtonHandler} title={"Login"} />
     </View>
   );
 }
